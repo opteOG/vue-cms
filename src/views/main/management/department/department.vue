@@ -1,8 +1,8 @@
 <template>
-    <div class="department">
-      <Search></Search>
-      <Content></Content>
-    </div>
+  <div class="department">
+    <Search></Search>
+    <Content></Content>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -12,15 +12,9 @@ import Search from './cpns/search.vue';
 import { onMounted } from 'vue';
 
 onMounted(() => {
-  const manageStore = useManageStore()
-  manageStore.fetchdpListAction()
-})
-
-
+  const manageStore = useManageStore();
+  manageStore.fetchdpListAction();
+});
 </script>
 
-<style lang="less" scoped>
-.department {
-
-}
-</style>
+<style lang="less" scoped></style>
