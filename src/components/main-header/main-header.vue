@@ -34,8 +34,8 @@
         <span class="username">{{ firstName }}</span>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item>项目仓库</el-dropdown-item>
-            <el-dropdown-item>官方文档</el-dropdown-item>
+            <el-dropdown-item @click="goToRepo">项目仓库</el-dropdown-item>
+            <el-dropdown-item @click="goToRepo">官方文档</el-dropdown-item>
             <el-dropdown-item @click="handlePersonCentreClick"
               >个人中心</el-dropdown-item
             >
@@ -87,6 +87,11 @@ const handleFullScreen = () => {
 const handleMessageClick = () => {
   router.push('/main/personality/technologys');
 };
+
+// 处理仓库跳转
+const goToRepo = () => {
+  window.location.href = 'https://github.com/opteOG/vue-cms';
+};
 </script>
 
 <style lang="less" scoped>
@@ -124,7 +129,6 @@ const handleMessageClick = () => {
     }
     .el-badge__content {
       border: none !important;
-
     }
   }
 }
